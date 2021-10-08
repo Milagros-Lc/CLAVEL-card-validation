@@ -1,5 +1,6 @@
-.headerPrimero{
 
+.containerImages{
+  margin-top: 70px;
 }
 .btnIniciarSesion{
   padding: 10px;
@@ -14,11 +15,81 @@
   background: violet;
   border-color: violet;
 }
+.containerForm{
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+  width: 500px;
+  height: 530px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+.formulario{
+  margin-top: 30px;
+  text-align: center;
+}
+.selectorMes{
+  margin-left: 120px;
+}
+.selectorAño{
+  margin-left: 20px;
+}
+.labelFormulario{
+  text-align: left;
+  display: block;
+  padding: 10px;
+  margin: 10px;
+}
+.inputFormulario{
+  text-align: right;
+  margin-left : 150px;
+  display: block;
+  padding: 5px;
+  width: 250px;
+}
+
+.inputCvv{
+  text-align: right;
+  margin-left: 145px;
+  display: inline-block;
+  padding: 5px;
+  width: 40px;
+}
+
+.divInputNumeroTarjeta{
+  display: flex;
+  justify-content: center;
+}
+.inputNumeroTarjeta{
+  text-align: right;
+  margin-left : 20px;
+  display: inline-block;
+  padding: 5px;
+  width: 40px;
+}
+.buttonValidar{
+ display: block;
+ margin: auto;
+ margin-top: 50px;
+ width: 400px;
+ padding: 5px;
+ background: black;
+ color: blanchedalmond;
+ 
+}
+
+.divFormulario{
+  text-align: left;
+  color: black;
+  margin: 30px;  
+}
 
 h1{
     display: inline-block;
     padding: 20px;
-    margin-left: 30px;
+    margin-left: 100px;
     font-size: 40px;
 }
 .grupoBotonesCabecera{
@@ -28,6 +99,7 @@ h1{
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
   }
   
   /*Agregamos margenes inferiores a los parrafos*/
@@ -37,18 +109,15 @@ h1{
   header {
     background: black;
     width: 100%;
-    position: fixed;
+    position: sticky;
     z-index: 100;
     height: 80px;
   
   }
-  nav {
-    /* Desplazamos el nav hacia la izquierda */
-  }
-  
+    
   nav ul {
     list-style: none;
-    overflow: hidden; /* Limpiamos errores de float */
+    overflow: hidden;
 
   }
   
@@ -63,7 +132,7 @@ h1{
   
   nav ul li a {
 
-    display: inline-block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    display: inline-block; 
     color: #fff;
     text-decoration: none;
     justify-content: space-between;
