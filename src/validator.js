@@ -1,50 +1,34 @@
 const validator = {
-  isValid: function (creditCardNumber) {
-    let aux;
-    for (let i = 0; i < creditCardNumber.length / 2; i++) {
-        aux = creditCardNumber[i];
-        creditCardNumber[i] = creditCardNumber[creditCardNumber.length - 1 - i];
-        creditCardNumber[creditCardNumber.length - 1 - i] = aux;
-    }
-    //console.log(creditCardNumber);
 
-    for (let i = 0; i < creditCardNumber.length; i++) {
-      if ((i % 2) != 0) {
-        let indiceMultiplicado =parseInt(creditCardNumber[i])  * 2;
-        if (indiceMultiplicado >= 10) {
-          let indiceConvertidoToString = indiceMultiplicado.toString();
-          let indiceSeparado = indiceConvertidoToString.split("");
-          let resultadoSumaIndice = parseInt(indiceSeparado[0]) + parseInt(indiceSeparado[1]);
-          creditCardNumber[i] = resultadoSumaIndice;
-        } else {
-          creditCardNumber[i] = indiceMultiplicado;
-        }
-      }
-    }
-    //console.log(creditCardNumber);
+  isValid: function (nuevoVariable) {
+    let result = false;
     let sumaDigitosDeTarjeta = 0;
-    for (let i = 0; i < creditCardNumber.length; i++) {
-      sumaDigitosDeTarjeta = sumaDigitosDeTarjeta + parseInt(creditCardNumber[i]);
+    for (let i = 0; i < nuevoVariable.length; i++) {
+      let aux = parseInt(nuevoVariable[i]);
+      if ((i % 2) !== 0) {
+        let indiceMultiplicado = aux * 2;
+        aux = indiceMultiplicado >= 10 ? indiceMultiplicado - 9 : indiceMultiplicado;
+      }
+      sumaDigitosDeTarjeta += aux;
     }
-    //console.log(sumaDigitosDeTarjeta);
-    if (sumaDigitosDeTarjeta % 10 == 0) {
-      return true;
-    } else {
-      return false;
+    if (sumaDigitosDeTarjeta > 0 && sumaDigitosDeTarjeta % 10 === 0) {
+      result = true;
     }
 
+    return result;
   },
 
-
   maskify: function (creditCardNumber) {
+    let numeroTarjeta = [...creditCardNumber];
     let numeroCifrado = '#';
-    for (let i = 0; i < ((creditCardNumber.length) - 4); i++) {
-      creditCardNumber[i] = numeroCifrado;
+    for (let i = 0; i < ((numeroTarjeta.length) - 4); i++) {
+      numeroTarjeta[i] = numeroCifrado;
     }
-    return (creditCardNumber);
+    return String(numeroTarjeta).replace(/,/g, "");
   }
-
 };
-
+/* let mask =  String(numeroTarjeta).replace(/,/g, "").substring(4, numeroTarjeta.length).replace(/\d/g,"*");
+let a=numeroTarjeta.substring( numeroTarjeta.length-4); */
+    
 export default validator;
 

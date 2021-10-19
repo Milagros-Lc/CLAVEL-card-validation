@@ -1,12 +1,84 @@
-
 .containerImages{
   margin-top: 70px;
+}
+select{
+  padding: 10px;
+  box-shadow: 2px 2px 5px #999;
+  border-color:#999;
+  
+}
+.headerPrimero{
+  background-color: whitesmoke;
+  height: 100px;
+}
+.logoTarjeta{
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-top: -25px;
+  margin-bottom: -25px
+}
+.logoTarjeta1{
+  width: 20%;
+  display: block;
+  margin: auto;
+  margin-top: -25px;
+  margin-bottom: -25px
+}
+.tituloMetodoPago{
+  text-align: center;
+  margin: 20px;
+  font-family: 'Times New Roman', Times, serif;
+ 
+}
+.hrRayita{
+  width: 100px;
+  height: 2px;
+ background-color: black;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.divDireccion{
+  
+  margin: 10px;
+  padding-left: 30px;
+ padding-bottom: 30px;
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
+  padding-top: 30px;
+  border-radius: 50px;
+
+}
+.divResultado{
+  margin: auto;
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
+  padding: 40px;
+  border-radius: 50px;
+  width: 500px;
+  height: 500px;
+
+}
+
+.labelNumeroValido{
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+    display: flex;
+
 }
 .btnIniciarSesion{
   padding: 10px;
   margin-right: 20px;
   background: black;
   color: white;
+  /* border-radius: 30px; */
+  width: 130px;
+  margin-top: 10px;
 }
 .btnRegistrarse{
   padding: 10px;
@@ -14,21 +86,14 @@
   color: white;
   background: violet;
   border-color: violet;
+ /*  border-radius: 30px; */
+  width: 130px;
 }
-.containerForm{
-  margin:auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  
-  width: 500px;
-  height: 530px;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-}
+
 .formulario{
   margin-top: 30px;
   text-align: center;
+  padding-bottom: 40px;
 }
 .selectorMes{
   margin-left: 120px;
@@ -44,20 +109,23 @@
 }
 .inputFormulario{
   text-align: right;
-  margin-left : 150px;
+  margin-left : 45px;
   display: block;
-  padding: 5px;
-  width: 250px;
+  padding: 10px;
+  width: 350px;
+  box-shadow: 2px 2px 5px #999;
+  border-color:whitesmoke;
 }
-
 .inputCvv{
   text-align: right;
   margin-left: 145px;
+  margin-top: -30px;
   display: inline-block;
-  padding: 5px;
-  width: 40px;
+  padding: 10px;
+  width: 70px;
+  box-shadow: 2px 2px 5px #999;
+  border-color:whitesmoke;
 }
-
 .divInputNumeroTarjeta{
   display: flex;
   justify-content: center;
@@ -66,43 +134,119 @@
   text-align: right;
   margin-left : 20px;
   display: inline-block;
-  padding: 5px;
-  width: 40px;
+  padding: 10px;
+  width: 70px;
+  box-shadow: 2px 2px 5px #999;
+  border-color:whitesmoke;
 }
 .buttonValidar{
  display: block;
  margin: auto;
- margin-top: 50px;
- width: 400px;
- padding: 5px;
+ margin-top: 30px;
+ width: 350px;
+ padding: 10px;
  background: black;
  color: blanchedalmond;
- 
+ margin-bottom: 10px;
+ border-radius: 30px;
 }
+.buttonValidar:hover{
+ cursor: pointer;
+ color :violet;
+ box-shadow: 04px 8px violet;
+ transition: all;
+}
+
+#buttonIniciarSesion{
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 200px;
+  padding: 10px;
+  background: black;
+  color: blanchedalmond;
+  margin-bottom: 10px;
+  border-radius: 30px;
+ }
+ #buttonIniciarSesion:hover{
+  cursor: pointer;
+  color :violet;
+  box-shadow: 04px 8px violet;
+  transition: all;
+ }
+
+
+
+
+
+
+
+
+progress{
+ background: black;
+}
+progress::-webkit-progress-bar-value {background-color:violet; }
+::-webkit-progress-value {background-color: violet;  }
+::-moz-progress-bar {background-color: violet;}
 
 .divFormulario{
   text-align: left;
   color: black;
-  margin: 30px;  
+  border-color: black;
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 50px;
+  padding: 40px;
+ 
 }
 
 h1{
-    display: inline-block;
-    padding: 20px;
-    margin-left: 100px;
-    font-size: 40px;
+  display: inline-block;
+  padding: 20px;
+  margin-left: 10px;
+  font-size: 55px;
+  letter-spacing: 3px;
+  font-family:  'Red Rose',"Open Sans",sans-serif;
+}
+h2{
+  font-family: 'Ruluko', Helvetica;
+  font-size: 22px;
+}
+.subtitulos{
+  text-align: center;
+  font-family: 'Ruluko', sans-serif;
+  margin: 50px;
+  font-size: 35px;
 }
 .grupoBotonesCabecera{
-    float: right;
-    padding: 20px;
+  float: right;
+  padding: 20px;
 }
+.footerPrivacidad{
+  width: 100%;
+  background: black;
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+ 
+  padding-top: 30px;
+
+  position: relative;
+}
+.footerEstilo{
+  background: violet;
+  height: 10px;
+  width: 100%;
+
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
   
-  /*Agregamos margenes inferiores a los parrafos*/
+  }
   p {
     margin-bottom: 20px;
   }
@@ -111,27 +255,21 @@ h1{
     width: 100%;
     position: sticky;
     z-index: 100;
-    height: 80px;
+    height: 180px;
   
   }
-    
   nav ul {
     list-style: none;
     overflow: hidden;
-
   }
-  
   nav ul li {
-  
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
     display: inline-block;
     justify-content: space-between;
 
   }
-  
   nav ul li a {
-
     display: inline-block; 
     color: #fff;
     text-decoration: none;
@@ -140,7 +278,430 @@ h1{
     padding-top: 30px;
 
   }
-  
   nav ul li:hover {
     background: #606460;
   }
+  .separador{
+width: 100%;
+height: 10px;
+background: white;
+  }
+
+/* 
+  --------------------fin de nav --------------------- */
+  .container{
+    position: relative;
+    margin: auto;
+    width: 1300px;
+    height: 900px;
+    display: flex !important;
+    justify-content: space-between;
+  
+  }
+  
+  .containerForm{
+   
+    height: 800px;
+    width: 500px;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+ 
+  }
+  .containerForm2{
+   
+    height: 600px;
+    width: 500px;
+    margin:auto;
+    margin-top: 40px;
+  
+  }
+ 
+.tituloNotaPedido{
+ margin: 20px;
+ margin-top: 60px;
+ 
+}
+.imgSlogan{
+display: inline-block;
+width: 5%;
+margin-left: 40px;
+}
+.slogan{
+  margin-top: -20px;
+  text-align: center;
+}
+.hrDetalle{
+  width: 100px;
+  height: 2px;
+  background-color: black;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.notaProductos{
+  
+  width: 600px;
+  height: 200px;
+}
+.tituloDetalle{
+ margin: 20px;
+}
+.descripcionDetalle{
+  border-color: violet;
+  border-style: dashed;
+  width: 500px;
+  height: 200px;
+ 
+
+}
+.subTotal{
+  display: inline-block;
+  margin: 40px;
+
+}
+.precio{
+  display: inline-block;
+  margin: 40px;
+  margin-left: 200px;
+}
+
+.total{
+  display: inline-block;
+  margin: 40px;
+  margin-right: 60px;
+}
+
+.imgProductos{
+ 
+  width: 25%;
+ margin-left: 50px;
+}
+
+
+.publicidad{
+  display: inline-block;
+  margin: 20px;
+
+}
+.imgPublicidad{
+  display: block;
+  margin: auto;
+  width: 100%;
+  
+}
+.divPublicidad{
+  margin: auto;
+}
+
+.iniciarSesion{
+  margin: auto;
+  width: 700px;
+  height: 400px;
+  margin-bottom: 80px;
+}
+.formInicio{
+  margin: 100px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 500px;
+  height: 350px;
+  padding: 30px;
+  
+}
+
+/* -----------------aqui empieza el slider................................................ */
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+	95% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%); }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+	font-family: sans-serif;
+}
+
+.wrapper {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	width: 100vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+
+.slide img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.caption {
+	color: white;
+	text-shadow: 1px 1px black;
+	font-size: 8vw;
+	position: absolute;
+	bottom: 8vw;
+	right: 4vw;
+  font-family:  'Red Rose',"Open Sans",sans-serif;
+}
+
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+	.slide {
+		width: 1200px;
+    height: 700px;
+	}
+
+	.caption {
+		font-size: 96px;
+		bottom: 96px;
+		right: 50px;
+	}
+}
+@media only screen and (min-width: 1500px) {
+	.slide {
+		width: 1500px;
+    height: 550px;
+	}
+
+	.caption {
+		font-size: 96px;
+
+		bottom: 146px;
+		right: 50px;
+	}
+}
+#containerSlider{
+  width: 100%;
+ /*  background:url(https://us.123rf.com/450wm/iconisa/iconisa1812/iconisa181203572/113694168-clavel-concepto-vector-icono-negro-ilustraci%C3%B3n-plana-clavel-signo-s%C3%ADmbolo.jpg?ver=6);
+   */
+}
+
+/* ------------------------------------------cardssss efectos------------------------------------------------------- */
+
+.hero-container {
+ 
+	margin: auto;
+	display: flex;
+  justify-content: space-between;
+  width: 1400px;
+  height: 500px;
+}
+
+.main-container {
+	width: 270px;
+	height: 540px;
+	position: relative;
+	margin: 0 20px;
+  
+}
+
+.poster-container {
+	width: 230px;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	z-index: 9999;
+}
+
+.poster {
+	width: 100%;
+/* 	box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6); */
+}
+
+.ticket-container {
+	background: #fff;
+	width: 270px;
+	height: 420px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 5px;
+	position: absolute;
+	top: 20px;
+	/* box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6); */
+	opacity: 0;
+}
+
+.main-container .ticket-container {
+	opacity: 1;
+	animation: bounceIn 0.6s linear;
+}
+
+@keyframes bounceIn {
+	0%,
+	20%,
+	40%,
+	60%,
+	80%,
+	to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.3, 0.3, 0.3);
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	20% {
+		-webkit-transform: scale3d(1.03, 1.03, 1.03);
+		transform: scale3d(1.03, 1.03, 1.03);
+	}
+	40% {
+		-webkit-transform: scale3d(0.9, 0.9, 0.9);
+		transform: scale3d(0.9, 0.9, 0.9);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: scale3d(1.01, 1.01, 1.01);
+		transform: scale3d(1.01, 1.01, 1.01);
+	}
+	80% {
+		-webkit-transform: scale3d(0.97, 0.97, 0.97);
+		transform: scale3d(0.97, 0.97, 0.97);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+/* 
+@keyframes bounce {
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
+
+.ticket__content {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.ticket__movie-title {
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.ticket__movie-slogan {
+	color: #999;
+	font-size: 0.9rem;
+	margin-bottom: 20px;
+}
+
+.ticket__current-price {
+	color: #69c982;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.ticket__old-price {
+	color: #999;
+	text-decoration: line-through;
+	margin-bottom: 10px;
+}
+
+.ticket__buy-btn {
+	cursor: pointer;
+	width: 100%;
+	background: black;
+	color: white;
+	padding: 15px 0;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.productosInicio{
+  display: flex;
+  justify-content: center;
+
+}

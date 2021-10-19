@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Tarjeta de crédito válida</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@500&family=Ruluko&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="headerPrimero">
-  <h1>CLAVE'L</h1>
-    <div class="grupoBotonesCabecera">
-      <button class="btnIniciarSesion">Iniciar Sesión</button>
-      <button class="btnRegistrarse">Registrarse</button>
-    </div>
-  </div>
+ 
   <header>
+    <div class="headerPrimero">
+      <img style="width: 6%; padding-left: 50px;"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb3uoWgX8jYQzMEmNEx2amfrtSC7GpcJaDnuF2xbOKJHpAoHDMKtEy9F04agBnTacHBjk&usqp=CAU"
+        alt="">
+      <h1>CLAVE'L</h1>
+      <div class="grupoBotonesCabecera">
+        <button class="btnIniciarSesion" id="btnIniciarSesion">Iniciar Sesión</button>
+        <button class="btnRegistrarse">Registrarse</button>
+      </div>
+    </div>
     <nav>
       <ul>
         <li><a href="#">Perfumes</a></li>
@@ -22,14 +31,173 @@
         <li><a href="#">Catálogo Online</a></li>
       </ul>
     </nav>
-  </header> 
-  
-<section class="containerForm">
-<div class="formulario" id="formularioTarjeta">
+   
+  </header>
+
+  <div class="separador"></div>
+<section id="containerSlider">
+  <div class="wrapper">
+    <div class="slider" id="slider">
+      <ul class="slides">
+        <li class="slide" id="slide1">
+          <a href="#">
+            <p class="caption">CLAVE'L</p>
+            <img src="https://www.aazperfumes.com.br/arquivos/Banner-900x358-Dior-MissDior-20171213_01.jpg?v=636487841389030000" alt="photo 1">
+          </a>
+        </li>
+        <li class="slide" id="slide2">
+          <a href="#">
+            <p class="caption">CLAVE'L</p>
+            <img src="https://www.theinsidersnet.com/site/public/images/pl_12/408/202103/080344_24032021_717_LOREAL-PER(1).jpg" alt="photo 2">
+          </a>
+        </li>
+        <li class="slide" id="slide3">
+          <a href="#">
+            <p class="caption"></p>
+            <img src="https://www.modalia.es/wp-content/uploads/2018/12/sephora_perfumes_.jpg" alt="photo 3">
+          </a>
+        </li>
+        <li class="slide" id="slide4">
+          <a href="#">
+            <p class="caption">CLAVE'L</p>
+            <img src="https://www.perfumeriasrouge.com/media/wysiwyg/Banner_principal_-_musk_noir.jpg" alt="photo 4">
+          </a>
+        </li>
+        <li class="slide" id="slide5">
+          <a href="#">
+             <p class="caption"></p>
+             <img src="https://i.pinimg.com/736x/4c/71/f0/4c71f019d67a86fd1708413feb321199--loi-web-banner.jpg" alt="photo 5">
+          </a>
+        </li>
+        <li class="slide">
+          <a href="#">
+            <p class="caption">CLAVE'L</p>
+            <img src="https://www.aazperfumes.com.br/arquivos/Banner-900x358-Dior-MissDior-20171213_01.jpg?v=636487841389030000" alt="photo 1">
+          </a>
+        </li>
+      </ul>
+      <ul class="slider-controler">
+        <li><a href="#slide1">&bullet;</a></li>
+        <li><a href="#slide2">&bullet;</a></li>
+        <li><a href="#slide3">&bullet;</a></li>
+        <li><a href="#slide4">&bullet;</a></li>
+        <li><a href="#slide5">&bullet;</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="container" id="containerEnvio">
+  <div class="containerForm"  >
+  <div class="progress" style=" display: flex;justify-content: center; margin: 30px;">
+    <progress id="progressBar" max="100" value="25" style="width: 700px; "></progress>
+  </div>
+  <div class="formulario" id="formularioTarjeta">
+  </div>
+</div>
+  <div class="containerForm2" >
+   <div class="notaPedido" id="notaPedido">
+  </div>
 </div>
 </section>
-  <footer></footer>
+
+
+
+
+
+<section id="productosInicio">
+<p class="subtitulos"> Los más vendidos ! </p>
+<br>
+<br>
+<div class="hero-container">
+  <div class="main-container">
+    <div class="poster-container">
+      <a href="#"><img  src="https://www.sephora.es/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw47b897bd/images/hi-res/SKU/SKU_2441/564565_swatch.jpg?sw=585&sh=585&sm=fit" class="poster" /></a>
+    </div>
+
+    <div class="ticket-container">
+      <div class="ticket__content">
+        <h4 class="ticket__movie-title">DIOR - MISS DIOR</h4>
+        <p class="ticket__movie-slogan">
+          EAU DE TOILETTE
+        </p>
+        <p class="ticket__current-price"  id="precioDior">S/.485.00</p>
+        <p class="ticket__old-price">S/.499.00</p>
+        <button class="ticket__buy-btn" id="botonProducto1" > Comprar </button>
+      </div>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="poster-container">
+      <a href="#"><img src="https://falabella.scene7.com/is/image/FalabellaPE/16237620_1?wid=800&hei=800&qlt=70" class="poster" /></a>
+    </div>
+    <div class="ticket-container">
+      <div class="ticket__content">
+        <h4 class="ticket__movie-title">COCO CHANEL</h4>
+        <p class="ticket__movie-slogan">
+          EAU DE PARFUM
+        </p>
+        <p class="ticket__current-price">S/.165.00</p>
+        <p class="ticket__old-price">S/.199.00</p>
+        <button class="ticket__buy-btn" id="botonProducto2" > Comprar </button>
+      </div>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="poster-container">
+      <a href="#"><img src="https://media.vogue.mx/photos/5ec0a8a61b6433d045148de0/1:1/w_3000,h_3000,c_limit/shampoo--sin-sal-kerastase.jpg" class="poster" /></a>
+    </div>
+    <div class="ticket-container">
+      <div class="ticket__content">
+        <h4 class="ticket__movie-title">KERASTASE - SHAMPOO</h4>
+        <p class="ticket__movie-slogan">
+          LINEA KERASTASE
+        </p>
+        <p class="ticket__current-price">S/.95.00</p>
+        <p class="ticket__old-price">S/.100.00</p>
+        <button class="ticket__buy-btn" id="botonProducto3" > Comprar </button>
+      </div>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="poster-container">
+      <a href="#"><img src="https://static.beautytocare.com/media/catalog/product/cache/global/image/650x650/85e4522595efc69f496374d01ef2bf13/e/s/estee-lauder-advanced-time-zone-night-wrinkle-cream-50ml.jpg" class="poster" /></a>
+    </div>
+    <div class="ticket-container">
+      <div class="ticket__content">
+        <h4 class="ticket__movie-title">CONCENTRE TOTAL</h4>
+        <p class="ticket__movie-slogan">
+          CREMA FACIAL PARA MANOS
+        </p>
+        <p class="ticket__current-price">S/.265.00</p>
+        <p class="ticket__old-price">S/.299.00</p>
+        <button class="ticket__buy-btn" id="botonProducto4"> Comprar </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</section>
+
+
+
+ 
+  
+  <section id="productos">
+
+  </section>
+  
+
+  <footer class="footerPrivacidad" id="footer">
+    <p>Todos los derechos reservados © Copyrights 2021 Diseñado por Milagros León</p>
+  </footer>
+  <div class="footerEstilo"></div>
   <script src="index.js" type="module"></script>
+  <script>
+  </script>
 </body>
 
 </html>
