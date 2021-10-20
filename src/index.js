@@ -6,19 +6,13 @@ let container = document.getElementById('containerEnvio');
 let containerSlider = document.getElementById('containerSlider');
 let productosInicio = document.getElementById('productosInicio');
 let botonIniciar = document.getElementById('btnIniciarSesion');
-let botonIniciarSesion;
-let inputUsuario;
-let seccionIniciarSesion;
-let formInicio;
-let sms;
-let productos;
+let botonIniciarSesion, inputUsuario, seccionIniciarSesion,
+    formInicio, sms, productos;
 
 container.style.visibility = "hidden";
 container.style.height = "10px";
 
-
 /////////////////////Detalle  de pedido/////////////////
-
 
 let seccionNotaPedido = document.getElementById('notaPedido');
 let divContenedorNotaPedido = document.createElement('div');
@@ -56,9 +50,9 @@ productos = document.createElement('div');
 divContenedorNotaPedido.appendChild(productos);
 productos.setAttribute('class', 'notaProductos');
 
-let imgProductos=document.createElement('img');
+let imgProductos = document.createElement('img');
 productos.appendChild(imgProductos);
-imgProductos.setAttribute("class","imgProductos");
+imgProductos.setAttribute("class", "imgProductos");
 
 
 let tituloDetalle = document.createElement('h3');
@@ -99,12 +93,12 @@ let textoPreciot = document.createTextNode('');
 preciot.appendChild(textoPreciot);
 descripcionDetalle.appendChild(preciot);
 preciot.setAttribute("class", "precio");
-
+let catalogos = document.getElementById('catalogos');
 
 function iniciarSesion() {
 
     productosInicio.style.display = "none";
-
+    catalogos.style.display = "none"
     containerSlider.style.display = "none";
 
 
@@ -163,11 +157,12 @@ botonIniciar.addEventListener('click', iniciarSesion);
 function mostrarInicio() {
 
 
-    if (inputUsuario.value == "milagros" || inputUsuario.value == "daniel" || inputUsuario.value == "deysi")  {
+    if (inputUsuario.value == "milagros" || inputUsuario.value == "daniel" || inputUsuario.value == "deysi") {
 
         seccionIniciarSesion.style.display = "none";
         containerSlider.style.display = "block";
         productosInicio.style.display = "block";
+        catalogos.style.display = "block"
         botonIniciar.innerHTML = "Hola Milagros!"
 
     } else
@@ -183,13 +178,13 @@ function comprarPrimerProducto() {
     productosInicio.style.display = "none";
 
     container.style.visibility = "visible";
-    container.style.height = "900px";
+    container.style.height = "800px";
 
-    imgProductos.src="https://www.sephora.es/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw47b897bd/images/hi-res/SKU/SKU_2441/564565_swatch.jpg?sw=585&sh=585&sm=fit";
-   
-    
-     precio.innerHTML= "S/.485.00";
-    preciot.innerHTML= "S/.485.00";
+    imgProductos.src = "https://www.sephora.es/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw47b897bd/images/hi-res/SKU/SKU_2441/564565_swatch.jpg?sw=585&sh=585&sm=fit";
+
+
+    precio.innerHTML = "S/.485.00";
+    preciot.innerHTML = "S/.485.00";
 
 }
 
@@ -204,11 +199,11 @@ function comprarSegundoProducto() {
     container.style.visibility = "visible";
     container.style.height = "900px";
 
-    imgProductos.src="https://falabella.scene7.com/is/image/FalabellaPE/16237620_1?wid=800&hei=800&qlt=70";
-   
-    
-     precio.innerHTML= "S/.165.00";
-    preciot.innerHTML= "S/.165.00";
+    imgProductos.src = "https://falabella.scene7.com/is/image/FalabellaPE/16237620_1?wid=800&hei=800&qlt=70";
+
+
+    precio.innerHTML = "S/.165.00";
+    preciot.innerHTML = "S/.165.00";
 
 }
 
@@ -222,11 +217,11 @@ function comprarTercerProducto() {
     container.style.visibility = "visible";
     container.style.height = "900px";
 
-    imgProductos.src="https://media.vogue.mx/photos/5ec0a8a61b6433d045148de0/1:1/w_3000,h_3000,c_limit/shampoo--sin-sal-kerastase.jpg";
-   
-    
-     precio.innerHTML= "S/.95.00";
-    preciot.innerHTML= "S/.95.00";
+    imgProductos.src = "https://media.vogue.mx/photos/5ec0a8a61b6433d045148de0/1:1/w_3000,h_3000,c_limit/shampoo--sin-sal-kerastase.jpg";
+
+
+    precio.innerHTML = "S/.95.00";
+    preciot.innerHTML = "S/.95.00";
 
 }
 
@@ -240,19 +235,13 @@ function comprarCuartoProducto() {
     container.style.visibility = "visible";
     container.style.height = "900px";
 
-    imgProductos.src="https://static.beautytocare.com/media/catalog/product/cache/global/image/650x650/85e4522595efc69f496374d01ef2bf13/e/s/estee-lauder-advanced-time-zone-night-wrinkle-cream-50ml.jpg";
-   
-    
-     precio.innerHTML= "S/.265.00";
-    preciot.innerHTML= "S/.265.00";
+    imgProductos.src = "https://static.beautytocare.com/media/catalog/product/cache/global/image/650x650/85e4522595efc69f496374d01ef2bf13/e/s/estee-lauder-advanced-time-zone-night-wrinkle-cream-50ml.jpg";
+
+
+    precio.innerHTML = "S/.265.00";
+    preciot.innerHTML = "S/.265.00";
 
 }
-
-
-
-
-
-//////////////////// seccion resultado ////////////////////////////
 
 
 ///////////agregando nodos creados a section Formulario////////////
@@ -457,73 +446,14 @@ function validarTarjeta() {
             let nuevoVariable = digitosDeTarjetaConcatenados.split('');
             let valorBoleano;
 
-            if ((nombreInputCvv.value.split('')).length == 3) {
 
 
+            if (nuevoVariable.length == 16 && nuevoVariable[0] == 4) {
 
+                if ((nombreInputCvv.value.split('')).length == 3) {
 
-                mensajeCVV.innerHTML = ""
-                mensajeValidacion.innerHTML = "";
-
-                if (nuevoVariable.length == 16 && nuevoVariable[0] == 4) {
-                    valorBoleano = validator.isValid(nuevoVariable.reverse());
-                    if (valorBoleano === true) {
-
-                        progressBar.setAttribute('value', '100');
-
-                        divContenedorDeFormulario.style.display = "none";
-                        paginaPaso4(creditCardNumber);
-
-                    } else {
-
-
-                        mensajeValidacion.innerHTML = "   * Ingrese numero de tarjeta valida.";
-
-                        for (let i = 1; i <= 4; i++) {
-                            InputNumeroDeTarjeta[i].value = "";
-                        }
-
-                        digitosDeTarjetaConcatenados = "";
-
-                    }
-                } else
-
-
-                    if (nuevoVariable.length == 16 && nuevoVariable[0] == 5) {
-                        valorBoleano = validator.isValid(nuevoVariable.reverse());
-                        if (valorBoleano === true) {
-
-                            progressBar.setAttribute('value', '100');
-
-                            divContenedorDeFormulario.style.display = "none";
-                            paginaPaso4(creditCardNumber);
-
-                        } else {
-
-
-                            mensajeValidacion.innerHTML = "   * Ingrese numero de tarjeta valida.";
-
-                            for (let i = 1; i <= 4; i++) {
-                                InputNumeroDeTarjeta[i].value = "";
-                            }
-
-                            digitosDeTarjetaConcatenados = "";
-
-                        }
-                    } else {
-                        mensajeValidacion.innerHTML = "   *Ingrese numero tarjeta valida";
-                    }
-
-
-            } else {
-                mensajeCVV.innerHTML = " *Ingrese CVV 4 digitos"
-                //////hjfgjhvjhvjhvjvjvjgchgcfh
-            }
-
-            if ((nombreInputCvv.value.split('')).length == 4) {
-                mensajeCVV.innerHTML = "";
-
-                if (nuevoVariable.length == 15 && nuevoVariable[0] == 3) {
+                    mensajeCVV.innerHTML = ""
+                    mensajeValidacion.innerHTML = "";
                     valorBoleano = validator.isValid(nuevoVariable.reverse());
                     if (valorBoleano === true) {
 
@@ -545,24 +475,79 @@ function validarTarjeta() {
 
                     }
                 } else {
-                    mensajeValidacion.innerHTML = "   *Ingrese numero de tarjeta Validaa";
+                    mensajeCVV.innerHTML = " *Ingrese CVV 3 digitos"
+                    //////hjfgjhvjhvjhvjvjvjgchgcfh
+                }
+            }
 
-                    /*  mensajeValidacion.innerHTML="   * Ingrese numero de tarjeta valida."; */
+            if (nuevoVariable.length == 16 && nuevoVariable[0] == 5) {
+                valorBoleano = validator.isValid(nuevoVariable.reverse());
+                if (valorBoleano === true) {
+
+                    progressBar.setAttribute('value', '100');
+
+                    divContenedorDeFormulario.style.display = "none";
+                    paginaPaso4(creditCardNumber);
+
+                } else {
+
+
+                    mensajeValidacion.innerHTML = "   * Ingrese numero de tarjeta valida.";
 
                     for (let i = 1; i <= 4; i++) {
                         InputNumeroDeTarjeta[i].value = "";
                     }
 
                     digitosDeTarjetaConcatenados = "";
+
                 }
             } else {
-                mensajeCVV.innerHTML = " *Ingrese CVV 3 digitos";
+                mensajeValidacion.innerHTML = "   *Ingrese numero tarjeta valida";
             }
-            //aca vaa
 
 
 
-        } else {
+            if (nuevoVariable.length == 15 && nuevoVariable[0] == 3) {
+                if ((nombreInputCvv.value.split('')).length == 4) {
+                    mensajeCVV.innerHTML = "";
+
+                    valorBoleano = validator.isValid(nuevoVariable.reverse());
+                    if (valorBoleano === true) {
+
+                        progressBar.setAttribute('value', '100');
+
+                        divContenedorDeFormulario.style.display = "none";
+                        paginaPaso4(creditCardNumber);
+
+                    } else {
+
+
+                        mensajeValidacion.innerHTML = "   * Ingrese numero de tarjeta valida.";
+
+                        for (let i = 1; i <= 4; i++) {
+                            InputNumeroDeTarjeta[i].value = "";
+                        }
+
+                        digitosDeTarjetaConcatenados = "";
+
+                    }
+                } else {
+                    mensajeCVV.innerHTML = " *Ingrese CVV 4 digitos";
+                }
+
+            } else {
+                mensajeValidacion.innerHTML = "   *Ingrese numero de tarjeta Validaa";
+
+                /*  mensajeValidacion.innerHTML="   * Ingrese numero de tarjeta valida."; */
+
+                for (let i = 1; i <= 4; i++) {
+                    InputNumeroDeTarjeta[i].value = "";
+                }
+
+                digitosDeTarjetaConcatenados = "";
+            }
+        }
+        else {
 
             mensajeValidacion.innerHTML = "   *Ingrese numero de tarjeta ";
         }
@@ -642,7 +627,7 @@ function paginaDireccionEnvio() {
     divDireccion.appendChild(inputDireccion);
     inputDireccion.setAttribute('class', 'inputFormulario');
 
-    validarLetras(inputDireccion);
+    /* validarLetras(inputDireccion); */
 
     let referencia = document.createElement('label');
     let textoReferencia = document.createTextNode("Referencia(Ejemplo: A la espalda del grifo Primax)");
@@ -672,7 +657,7 @@ function paginaPago() {
 
     idFormulario.style.display = "block";
     divDireccion.style.display = "none";
-    progressBar.setAttribute('value', '75');
+    progressBar.setAttribute('value', '66');
 
 }
 
@@ -686,7 +671,7 @@ function paginaPaso4(creditCardNumber) {
 
     let divPublicidad = document.createElement('div');
     divContenedor.appendChild(divPublicidad);
-    divPublicidad.setAttribute("class","divPublicidad");
+    divPublicidad.setAttribute("class", "divPublicidad");
 
 
     let labelPublicidad = document.createElement('h2');
@@ -708,7 +693,7 @@ function paginaPaso4(creditCardNumber) {
 
     let publicidad = document.createElement('img');
     divPublicidad.appendChild(publicidad);
-    publicidad.src = "https://img.freepik.com/vector-gratis/linea-cosmeticos-cuidado-piel-mujer-productos-banner-anuncios-realistas-poster_33099-1416.jpg?size=626&ext=jpg";
+    publicidad.src = "https://image.isu.pub/191009182643-dd2c4dbfa68f1fd11d2ac290c8c9a879/jpg/page_216.jpg";
     publicidad.setAttribute('class', 'imgPublicidad');
 
 
@@ -779,21 +764,34 @@ function paginaPaso4(creditCardNumber) {
             }
     let br = document.createElement('br');
     divResultado.appendChild(br);
+    let br2 = document.createElement('br');
+    divResultado.appendChild(br2);
 
 
 
-
-    let mensajeResultado = document.createElement('h4');
+    let mensajeResultado = document.createElement('label');
     let textoMensaje = document.createTextNode("* Tiempo estimado: 4 a 5 días en llegar a su destino. ");
     mensajeResultado.appendChild(textoMensaje);
     divResultado.appendChild(mensajeResultado);
     mensajeResultado.setAttribute('class', 'labelFormulario');
+
+    let br3 = document.createElement('br');
+    divResultado.appendChild(br3);
+    let br4 = document.createElement('br');
+    divResultado.appendChild(br4);
+    let br5 = document.createElement('br');
+    divResultado.appendChild(br5);
+
+
+    let mensajeGracias = document.createElement('h4');
+    let textoGracias = document.createTextNode(" Gracias por tu compra! ");
+    mensajeGracias.appendChild(textoGracias);
+    divResultado.appendChild(mensajeGracias);
+    mensajeGracias.setAttribute('style', 'text-aling:center');
+
 }
 //pagina direccion de envio
 
-
-
-/* botonGuardarDireccion.addEventListener('click', verPagina3); */
 function validarLetras(texto) {
     texto.addEventListener("keyup", (e) => {
 
