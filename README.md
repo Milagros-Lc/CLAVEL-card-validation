@@ -1,4 +1,4 @@
-# CLAVE'L - Porque todas lo valemos.
+# CLAVE'L - Porque todxs lo valemos.
 
 ## Índice
 
