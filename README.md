@@ -25,8 +25,6 @@ par se les debe multiplicar por dos, si este número es mayor o igual a 10,
 debemos sumar los dígitos del resultado; el número a verificar será válido si
 la suma de sus dígitos finales es un múltiplo de 10.
 
-![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
-
 ## 2.1 Nombre del producto
 
 CLAVE'L - Porque todas lo valemos.
@@ -56,10 +54,8 @@ Lograr una compra y un envio seguro con los productos que más deseen.
 
 ** Primer prototipo con papel y lápiz (blanco y negro).
 
-
-
-
-
+![prototipo2](https://user-images.githubusercontent.com/83854147/138361916-487e5103-44b5-42bc-8d3b-fff2621ee9e0.jpeg)
+![prototipo1](https://user-images.githubusercontent.com/83854147/138361914-5d3ba17f-a366-4648-8d75-495f1c293815.jpeg)
 
 
 * FeedBack 1
@@ -68,8 +64,10 @@ Se identificó: - Buena visión en el maquetado.
 
 ** Prototipo en Figma
 
-https://drive.google.com/file/d/1I7PHjZ00msk09jmu3TLhQufto0cGIEVz/view?usp=sharing
-https://drive.google.com/file/d/1ptaG3iaqViOSHVzFSPKRkLVKVxIZ9p3i/view?usp=sharing
+
+![formulario2](https://user-images.githubusercontent.com/83854147/138351660-cab08a31-6276-47f2-9ec0-9ca4554caf4c.png)
+![formulario 1](https://user-images.githubusercontent.com/83854147/138351645-9543be56-0e05-4e2f-a99a-9b420cbf89b4.png)
+
 
 * FeedBack 2
 
@@ -81,7 +79,10 @@ de la vista de direccion de envío.
 
 
 
+![pagina de inicio](https://user-images.githubusercontent.com/83854147/138361688-f628285d-6f86-4cf0-81b5-b9004006f755.png)
 
+![direccion de envio](https://user-images.githubusercontent.com/83854147/138361698-5a92171b-6b80-4d7b-ad93-5e5b28994b50.png)
+![metodo de pago](https://user-images.githubusercontent.com/83854147/138361708-754adefa-4149-49d9-b326-b432e7835f82.png)
 
 * FeedBack 3
 
@@ -159,7 +160,7 @@ Se identificó:  - Vistas buenas, claras y accesibles.
 
 - [x] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+- [x] **GitHub: Despliegue con GitHub Pages**
 
  
 ### UX (User eXperience)
@@ -171,7 +172,7 @@ Se identificó:  - Vistas buenas, claras y accesibles.
 - [x] **Aplicar los principios de diseño visual (contraste, alineación, jerarquía)**
 
 
-## 4. Criterios de aceptación mínimos del proyecto
+## 5. Criterios de aceptación mínimos del proyecto
 
 - Usa solo caracteres numéricos (dígitos) en la tarjeta a validar [0-9].
 - Ver el resultado si es válido o no.
