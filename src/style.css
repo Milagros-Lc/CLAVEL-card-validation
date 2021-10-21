@@ -294,7 +294,7 @@ background: white;
   .container{
     position: relative;
     margin: auto;
-    width: 1500px;
+    width: 1200px;
     height: 500px;
     display: flex !important;
     justify-content: space-between;
