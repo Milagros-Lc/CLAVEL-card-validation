@@ -4,10 +4,8 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [2.1 Nombre del producto](#2.1-nombre-del-proyecto)
-* [2.2 Definición del producto](#2.2-definición-del-proyecto)
 * [3. Diseño de experiencia de usuaruario](#3-diseño-de-experiencia-de-usuario)
-* [4. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+* [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 
 ***
@@ -24,6 +22,8 @@ solamente contiene dígitos [0-9]); a todos los números que ocupan una posició
 par se les debe multiplicar por dos, si este número es mayor o igual a 10,
 debemos sumar los dígitos del resultado; el número a verificar será válido si
 la suma de sus dígitos finales es un múltiplo de 10.
+
+## 2. Resumen del proyecto
 
 ## 2.1 Nombre del producto
 
@@ -52,16 +52,6 @@ Lograr una compra y un envio seguro con los productos que más deseen.
 
 ### 3. Diseño de experiencia de usuario
 
-** Primer prototipo con papel y lápiz (blanco y negro).
-
-![prototipo2](https://user-images.githubusercontent.com/83854147/138361916-487e5103-44b5-42bc-8d3b-fff2621ee9e0.jpeg)
-![prototipo1](https://user-images.githubusercontent.com/83854147/138361914-5d3ba17f-a366-4648-8d75-495f1c293815.jpeg)
-
-
-* FeedBack 1
-
-Se identificó: - Buena visión en el maquetado.
-
 ** Prototipo en Figma
 
 
@@ -88,6 +78,9 @@ de la vista de direccion de envío.
 
 Se identificó:  - Vistas buenas, claras y accesibles.
 
+PRUEBAS UNITARIAS
+
+![test card-validation](https://user-images.githubusercontent.com/83854147/154399983-75bff6c6-f13b-41a4-aa84-b6054effe9f4.png)
 
 ## 4. Objetivos de aprendizaje
 
